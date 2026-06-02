@@ -1,0 +1,14 @@
+venv/
+__pycache__/
+*.pyc
+
+.env
+
+data/posters/
+data/raw/*.csv
+data/processed/*.csv
+
+.poster_download_log.csv
+
+.vscode/
+.idea/
