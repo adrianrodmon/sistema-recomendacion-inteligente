@@ -102,6 +102,12 @@ def download_posters_for_all_films(conn, limit=None):
             title,
             year
         )
+        print(f"\nBuscando: {title} ({year})")
+
+        if tmdb_movie:
+            print(f"Encontrada: {tmdb_movie['title']}")
+        else:
+            print("No encontrada")
 
         if tmdb_movie:
 
@@ -187,8 +193,8 @@ if __name__ == "__main__":
     print("=== DESCARGA DE POSTERS ===")
 
     download_posters_for_all_films(
-        conn,
-        limit=10
+        conn
+        #limit=10
     )
 
     verify_downloaded_posters()
